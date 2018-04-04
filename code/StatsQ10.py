@@ -35,7 +35,12 @@ def EstimateGoals(lam, m):
     VertLine(ci[1])
     
     thinkplot.Cdf(cdf)
-    thinkplot.Show(xlabel = 'Goals', ylabel = 'CumProb', title = 'Sampling Distribution, lam = ' + str(lam))
+    #thinkplot.Show(xlabel = 'Goals', ylabel = 'CumProb', title = 'Sampling Distribution, lam = ' + str(lam))
+    thinkplot.SaveFormat(root = 'Q9_sampling_dist',
+                         fmt = 'png',
+                         xlabel = 'Goals',
+                         ylabel = 'CumProb',
+                         title = 'Sampling Distribution, lam = ' + str(lam))
 
 thinkstats2.RandomSeed(1)
 EstimateGoals(5, 1000)

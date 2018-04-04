@@ -15,13 +15,15 @@ pmf = thinkstats2.Pmf(rands)
 cdf = thinkstats2.Cdf(rands)
 
 thinkplot.Pmf(pmf)
-thinkplot.Show(xlabel='x', ylabel='pmf')
-#thinkplot.Save(root = 'Q4_2pmf',
-#               xlabel = 'x',
-#               ylabel = 'Prob')
+#thinkplot.Show(xlabel='x', ylabel='pmf')
+thinkplot.SaveFormat(root = 'Q4_2pmf',
+                     fmt = 'png',
+                     xlabel = 'x',
+                     ylabel = 'Prob')
 
 thinkplot.Cdf(cdf)
-thinkplot.Show(xlabel = 'x', ylabel = 'cdf')
-#thinkplot.Save(root = 'Q4_2cdf',
-#            xlabel = 'x',
-#            ylabel = 'CumProb')
+#thinkplot.Show(xlabel = 'x', ylabel = 'cdf')
+thinkplot.SaveFormat(root = 'Q4_2cdf',
+                     fmt = 'png',
+                     xlabel = 'x',
+                     ylabel = 'CumProb')

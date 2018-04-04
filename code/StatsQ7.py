@@ -13,7 +13,11 @@ print('Spearman\'s Rank Correlation, Mother\'s age and Birth weight: ', rho_s)
 
 thinkplot.LEGEND = False
 thinkplot.Scatter(live.agepreg, live.totalwgt_lb)
-thinkplot.Show(xlabel = 'Mother\'s age', ylabel = 'Birth weight')
+#thinkplot.Show(xlabel = 'Mother\'s age', ylabel = 'Birth weight')
+thinkplot.SaveFormat(root = 'age_weight_scatter',
+                     fmt = 'png',
+                     xlabel = 'Mothers\'s age',
+                     ylabel = 'Birth weight')
 
 thinkplot.LEGEND = True
 bins = np.arange(10, 45, 2.5)
@@ -25,4 +29,8 @@ for percent in [75, 50, 25]:
     weights = [cdf.Percentile(percent) for cdf in cdfs]
     label = '%dth' % percent
     thinkplot.Plot(ages, weights, label = label)
-thinkplot.Show(xlabel = 'Mother\'s age', ylabel = 'Birth weight')
+#thinkplot.Show(xlabel = 'Mother\'s age', ylabel = 'Birth weight')
+thinkplot.SaveFormat(root = 'age_weight_percentiles',
+                     fmt = 'png',
+                     xlabel = 'Mother\'s age',
+                     ylabel = 'Birth weight')

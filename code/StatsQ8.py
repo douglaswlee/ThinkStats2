@@ -40,7 +40,15 @@ print('Standard error, n = 1000: ', stderrs[-1])
 print('Confidence interval, n = 1000: ', cis[-1])
 
 thinkplot.Cdf(cdfs[0])
-thinkplot.Show(xlabel='x', ylabel='CumProb')
+#thinkplot.Show(xlabel='x', ylabel='CumProb')
+thinkplot.SaveFormat(root = 'Q8_cdf',
+                     fmt = 'png',
+                     xlabel = 'x',
+                     ylabel = 'CumProb')
 
 thinkplot.Plot(ns, stderrs)
-thinkplot.Show(xlabel='n', ylabel='Standard Error')
+#thinkplot.Show(xlabel='n', ylabel='Standard Error')
+thinkplot.SaveFormat(root = 'Q8_stderr',
+                     fmt = 'png',
+                     xlabel = 'n',
+                     ylabel = 'Standard Error')

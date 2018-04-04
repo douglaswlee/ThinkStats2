@@ -13,5 +13,9 @@ print(bias_pmf)
 print('Mean number of children, actual: ', act_pmf.Mean())
 print('Mean number of children, biased: ', bias_pmf.Mean())
 
-thinkplot.Pmfs([act_pmf, bias_pmf])
-thinkplot.show(xlabel='No. of Children', ylabel='pmf')
+fig = thinkplot.Pmfs([act_pmf, bias_pmf])
+#thinkplot.show(xlabel='No. of Children', ylabel='pmf')
+thinkplot.SaveFormat(root = 'act_vs_biased',
+               fmt = 'png',
+               xlabel = 'No. of Children',
+               ylabel = 'pmf')
